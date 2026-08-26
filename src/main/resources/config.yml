@@ -1,0 +1,18 @@
+# DominionBedrockUI 配置文件
+# 本扩展为 Dominion 的基岩版（Geyser/floodgate）表单界面扩展，不修改 Dominion 本体。
+
+# 是否拦截 Dominion 主命令（无参数时）为基岩玩家打开表单界面。
+# Java 玩家完全不受影响，仍使用 Dominion 原有的 Chest/Dialog UI。
+intercept-dominion-command: true
+
+# 触发拦截的命令（不含斜杠，大小写不敏感）。
+# 仅当命令不带任何参数时拦截（例如 /dominion、/dom）。
+intercept-commands:
+  - dominion
+  - dom
+
+# 通过表单创建领地时的限制
+create:
+  # 领地名称允许的正则（默认允许中英文、数字、下划线、连字符，1-32 字符）。
+  # 创建时使用玩家已通过圈地工具选好的两个点（内部转发 /dominion create 命令）。
+  name-regex: '^[\w一-龥-]{1,32}$'

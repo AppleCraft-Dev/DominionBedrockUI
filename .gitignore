@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+
+# 本地依赖 jar（Dominion / DominionAPI，见 build.gradle.kts 说明）
+libs/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+out/
+
+# OS
+Thumbs.db
+.DS_Store
